@@ -1,0 +1,149 @@
+/*main_page variables*/
+/*creating my variables*/
+/*FRENCH LIME*/
+/*ROCKET METALLIC*/
+/*FRENCH SKY BLUE*/
+/*GAMBOGE ORANGE (BROWN)*/
+/*ROSE GOLD*/
+/*MAXIMUM YELLOW RED*/
+/*gallery variables*/
+/*variables*/
+/*contact variables*/
+/*variable*/
+.topnav {
+  overflow: hidden;
+  background-color: #ccc;
+  grid-column: 1 / 8;
+  grid-row: 1/2; }
+  .topnav a {
+    float: right;
+    color: #45a049;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: 'Raleway', sans-serif; }
+    .topnav a .hover {
+      background-color: #4CAF50;
+      color: black; }
+    .topnav a a.active {
+      background-color: #ccc;
+      color: #4CAF50; }
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  overflow: scroll; }
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: blue;
+  min-width: 100px;
+  box-shadow: 2px 3px #EFC44C;
+  z-index: 1; }
+
+.dropdown-content a {
+  text-decoration: none;
+  display: block;
+  float: right;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 10px;
+  font-family: 'Raleway', sans-serif; }
+
+.dropdown-content a:hover {
+  background-color: #45a049; }
+
+.dropdown:hover .dropdown-content {
+  display: block; }
+
+.dropdown:hover .dropbuttton {
+  background-color: #f9f9f9; }
+
+/*styling my container*/
+.contact_container {
+  display: grid;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 10px;
+  padding: 20px;
+  grid-auto-rows: 100px;
+  margin: 0px;
+  /*styling my form*/
+  /* Clear floats after the columns */
+  /*styling my dropdown*/
+  /* Responsive layout width=600px */
+  /* Medium devices (landscape tablets, 768px and up) */
+  /* Large devices (laptops/desktops, 992px and up) */
+  /*Extra large devices (large laptops and desktops, 1200px and up) */ }
+  .contact_container img {
+    height: 30px;
+    width: 30px; }
+  .contact_container * {
+    box-sizing: border-box; }
+  .contact_container input[type=text], .contact_container select, .contact_container textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical; }
+  .contact_container label {
+    padding: 12px 12px 12px 0;
+    display: inline-block; }
+  .contact_container input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right; }
+  .contact_container input[type=submit]:hover {
+    background-color: #45a049; }
+  .contact_container .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px; }
+  .contact_container .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px; }
+  .contact_container .row:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .contact_container .dropdown {
+    position: relative;
+    display: inline-block; }
+  .contact_container .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px;
+    padding: 12px 16px;
+    z-index: 1; }
+  .contact_container .dropdown:hover .dropdown-content {
+    display: block; }
+  @media screen and (max-width: 600px) {
+    .contact_container .col-25, .contact_container .col-75, .contact_container input[type=submit] {
+      width: 100%;
+      margin-top: 0; } }
+  @media screen and (min-width: 768px) {
+    .contact_container .col-25, .contact_container .col-75, .contact_container input[type=submit] {
+      width: 100%;
+      margin-top: 0; } }
+  @media screen and (min-width: 992px) {
+    .contact_container .col-25, .contact_container .col-75, .contact_container input[type=submit] {
+      width: 100%;
+      margin-top: 0; } }
+  @media only screen and (min-width: 1200px) {
+    .contact_container .col-25, .contact_container .col-75, .contact_container input[type=submit] {
+      width: 100%;
+      margin-top: 0; } }
+
+/*# sourceMappingURL=contact.css.map */

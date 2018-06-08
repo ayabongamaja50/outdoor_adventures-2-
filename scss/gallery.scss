@@ -1,0 +1,297 @@
+
+@import '../partials/_variable.scss';
+
+* Base Element Styles *
+
+* {
+	box-sizing: border-box;
+}
+body {
+	display: grid;
+	font: 1em/1.5 'Open Sans', sans-serif;
+	color: $firstColor;
+	background: $primaryColor;
+	margin: 0;
+	background-image:url(https://images.pexels.com/photos/35884/amazing-beautiful-beauty-blue.jpg?auto=compress&cs=tinysrgb&h=350);
+
+	background-size: contain;
+
+	.topnav {
+	    overflow: hidden;
+	    background-color: $firstColor;
+	    grid-column: 1 / 8;
+	    grid-row: 3/4;
+
+	    a {
+	      float: right;
+	      color: $thirdColor;
+	      text-align: center;
+	      padding: 14px 16px;
+	      text-decoration: none;
+	      font-size: 17px;
+	      font-family: 'Raleway', sans-serif;
+
+	      .hover {
+	       background-color: $secondColor;
+	       color: black;
+	      }
+
+	      a.active {
+	       background-color: $firstColor;
+	       color: $secondColor;
+
+	      }
+	    }
+	  }
+		.dropdown {
+ 				 position: relative;
+ 				 display: inline-block;
+				 overflow:scroll;
+ 		 }
+
+
+ 		 .dropdown-content {
+ 				 display: none;
+ 				 position: absolute;
+ 				 background-color: black;
+ 				 min-width: 100px;
+ 				 box-shadow: 2px 3px $tertiaryColor;
+ 				 z-index: 1;
+ 		 }
+
+ 		 .dropdown-content a {
+ 				 text-decoration: none;
+ 				 display: block;
+				 float: right;
+ 	       color: white;
+ 	       text-align: center;
+ 	       padding: 14px 16px;
+ 	       text-decoration: none;
+ 	       font-size: 10px;
+ 	       font-family: 'Raleway', sans-serif;
+ 		 }
+
+ 		 .dropdown-content a:hover {
+ 			 background-color: $thirdColor;
+ 		 }
+
+ 		 .dropdown:hover .dropdown-content {
+ 				 display: block;
+ 		 }
+
+ 		 .dropdown:hover .dropbuttton {
+ 				 background-color: $fourthColor;
+ 		 }
+h1,
+h2,
+h3 {
+	text-transform: uppercase;
+}
+h2 {
+	font-size: 1.125em;
+	color: $primaryColor;
+	font-weight: 600;
+	margin: 0;
+}
+h3 {
+	font-size: 1.3em;
+	line-height: 1.25em;
+	margin-top: .85em;
+	margin-bottom: .5em;
+}
+p {
+	font-size: .875em;
+	line-height: 1.4;
+	margin: 0 0 1.5em;
+}
+
+/* Base Layout Styles */
+
+/* ---- Layout Containers ---- */
+
+.gallery_container,
+.content {
+	margin: auto;
+	display: grid;
+
+}
+.gallery_container {
+	display:grid;
+  grid-template-columns: repeat(7,1fr);
+  grid-gap: 10px;
+  padding: 20px 0px ;
+  grid-auto-rows:100px;
+  margin:0px;
+	width: 94.02985075%;
+	max-width: 1260px;
+	padding: 0 2.25em 4em;
+
+
+
+
+.main-header {
+	text-align: center;
+	padding: 2.8em 0 3.8em;
+	grid-column: 1 / 8;
+	grid-row: 1/3;
+}
+.cube-container {
+	max-width: 200px;
+	text-align: center;
+	margin: 0 auto 4.5em;
+}
+/* ---- Page Elements ---- */
+
+.name {
+	font-size: 1.65em;
+	font-weight: 800;
+	margin: 0 0 1.5em;
+	line-height: 1;
+}
+.name span {
+	font-weight: 300;
+	margin-left: -7px;
+}
+.logo {
+	width: 45px;
+	margin-bottom: .4em;
+	cursor: pointer;
+	background-color:$firthColor;
+}
+
+
+.button {
+	font-size: .8em;
+	color: $secondaryColor;
+	width: 90%;
+	line-height: 1.15;
+	font-weight: 700;
+	display: block;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: .95em 0;
+	border-radius: .5em;
+	background: rgba(74,137,202, .8);
+	margin: auto;
+}
+/* ---- Photo Overlay ---- */
+
+.photo-desc {
+	font-size: .85em;
+	color: $secondaryColor;
+	padding: 1.1em 1em 0;
+	background: $thirdColor;
+}
+.content_clearfix{
+	grid-column: 1/8;
+	grid-row: 5/auto;
+
+
+/* ---- Float clearfix ---- */
+
+.clearfix::after {
+	content: " ";
+	display: table;
+	clear: both;
+
+}
+
+/*Media Queries */
+
+@media (min-width: 769px) {
+	.cube-container {
+		float: left;
+		margin-left: 16.6%;
+	}
+}
+@media (min-width: 1025px) {
+	.cube-container:first-child {
+		margin-left: 0;
+	}
+	.cube-container:last-child{
+		float: left;
+		margin-left: 40%
+	}
+	.content {
+		max-width: 900px;
+		margin: auto;
+	}
+}
+
+@media (min-width: 600px) {
+	.cube-container {
+		float: left;
+		margin-left: 16.6%;
+	}
+}
+
+/*Button Transitions */
+
+.button {
+	transition: background.3s;
+}
+.button:hover {
+	background: rgba(74,137,202, 1);
+}
+
+/* Photo 3D Transforms & Transitions
+*/
+
+.cube-container {
+	box-shadow: 0 18px 40px 5px;
+  perspective: 800px;
+}
+
+.photo-cube {
+transition: transform 2s ease-in-out;
+  width: 220px;
+  height: 200px;
+  transform-style: preserve-3d;
+}
+
+.photo-cube:hover {
+transform: rotateY(-270deg);
+}
+
+.front,
+.back,
+.left,
+.right {
+width: 100%;
+height: 100%;
+display: block;
+position: absolute;
+}
+
+.front {
+transform: translate3d(0,0,110px);
+}
+
+.back {
+transform: translateZ(-110px) rotateY(270deg);
+  transform-origin: center left;
+}
+
+.left {
+transform: rotateY(-270deg) translate3d(110px, 0, 0);
+  transform-origin: top right;
+}
+
+.right {
+transform: translateZ(-110px) rotateY(180deg);
+ }
+}
+footer {
+  display: grid;
+  border: 5px   black solid;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: $firstColor;
+  color: black;
+  text-align: left;
+
+}
+}
+}
